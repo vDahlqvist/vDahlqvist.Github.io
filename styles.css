@@ -1,0 +1,41 @@
+.header {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 15px;
+
+}
+
+.header-links {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.t-programmering, .webbutveckling1, .programmering1, .personal {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.t-programmering:hover, .webbutveckling1:hover, .programmering1:hover, .personal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
