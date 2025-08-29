@@ -15,8 +15,8 @@
     justify-content: flex-end;
     
 }
-
-.t-programmering, .webbutveckling1, .programmering1, .personal {
+/* Add div class for cards here */
+.t-programmering, .webbutveckling1, .programmering1, .personal, .daniils-design, .ovningsuppgifter {
     padding: 10px;
     border: 1px solid #ccc;
     margin: 10px 0;
@@ -34,8 +34,49 @@
     max-width: 1100px;
     margin: auto;
 }
-
-.t-programmering:hover, .webbutveckling1:hover, .programmering1:hover, .personal:hover {
+/* hover effect for cards */
+.t-programmering:hover, .webbutveckling1:hover, .programmering1:hover, .personal:hover, .daniils-design:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
+/* for overlay on subpages */
+.daniils-design-overlay {
+  position: fixed; 
+  display: none; 
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 2; 
+  cursor: pointer; 
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 80%;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
