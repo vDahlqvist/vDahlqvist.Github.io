@@ -13,6 +13,8 @@
 .header-links {
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
+    
     
 }
 /* Add div class for cards here */
@@ -56,6 +58,8 @@
 
 .overlay-content {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,6 +67,14 @@
   padding: 20px;
   border-radius: 15px;
   max-width: 80%;
+}
+
+.overlay-content a {
+  text-decoration: none;
+}
+
+.overlay-content a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -77,6 +89,14 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 
