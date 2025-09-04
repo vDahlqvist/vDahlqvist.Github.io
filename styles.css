@@ -1,3 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    
+}
+
 .header {
     justify-content: flex-start;
     align-items: flex-start;
@@ -7,6 +15,7 @@
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     border-radius: 15px;
+    margin: 10px;
 
 }
 
@@ -18,7 +27,7 @@
     
 }
 /* Add div class for cards here */
-.t-programmering, .webbutveckling1, .programmering1, .personal, .daniils-design, .ovningsuppgifter {
+.about-me, .my-projects, .experience, .daniils-design, .ovningsuppgifter {
     padding: 10px;
     border: 1px solid #ccc;
     margin: 10px 0;
@@ -30,19 +39,21 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
     max-width: 1100px;
     margin: auto;
+    min-height: 65vh;
+
 }
 /* hover effect for cards */
-.t-programmering:hover, .webbutveckling1:hover, .programmering1:hover, .personal:hover, .daniils-design:hover {
+.about-me:hover, .experience:hover, .my-projects:hover, .daniils-design:hover, .ovningsuppgifter:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 /* for overlay on subpages */
-.daniils-design-overlay {
+.daniils-design-overlay, .about-me-overlay, .experience-overlay {
   position: fixed; 
   display: none; 
   width: 100%; 
