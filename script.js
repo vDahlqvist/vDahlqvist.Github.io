@@ -1,51 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the overlay element
-    const overlay = document.getElementById('overlay');
-    const tProgrammering = document.getElementById('t-programmering');
-    const webbutveckling1 = document.getElementById('webbutveckling1');
+    // Get overlay elements
+    const daniilsOverlay = document.getElementById('overlay');
+    const aboutMeOverlay = document.getElementById('about-me-overlay');
+    const experienceOverlay = document.getElementById('experience-overlay');
+    
+    // Get card elements
+    const aboutMeCard = document.getElementById('about-me');
+    const experienceCard = document.getElementById('experience');
     const programmering1 = document.getElementById('programmering1');
     const personal = document.getElementById('personal');
+    const daniilsCard = document.getElementById('daniilsCard');
 
-    // Get the buttons
-    const showButton = document.getElementById('showOverlay');
-    const closeButton = document.getElementById('closeOverlay');
+    // Handle overlay displays for cards
+    if (aboutMeCard && aboutMeOverlay) {
+        aboutMeCard.addEventListener('click', function() {
+            aboutMeOverlay.style.display = 'block';
+        });
+    }
     
-    // When show button is clicked, display the overlay
-    showButton.addEventListener('click', function() {
-        
-    });
+    if (experienceCard && experienceOverlay) {
+        experienceCard.addEventListener('click', function() {
+            experienceOverlay.style.display = 'block';
+        });
+    }
+    
+    if (daniilsCard && daniilsOverlay) {
+        daniilsCard.addEventListener('click', function() {
+            daniilsOverlay.style.display = 'block';
+        });
+    }
 
-    // Show the subpage for the selected card
-    if (tProgrammering) {
-        tProgrammering.addEventListener('click', function() {
-            window.location.href = 't-programmering.html';
-        });
-    }
-    if (webbutveckling1) {
-        webbutveckling1.addEventListener('click', function() {
-            window.location.href = 'webbutveckling1.html';
-        });
-    }
+    // Handle page navigation for cards (if not using overlays)
     if (programmering1) {
         programmering1.addEventListener('click', function() {
             window.location.href = 'programmering1.html';
         });
     }
+    
     if (personal) {
         personal.addEventListener('click', function() {
             window.location.href = 'personal.html';
         });
     }
 
-    // When close button is clicked, hide the overlay
-    closeButton.addEventListener('click', function() {
-        overlay.style.display = 'none';
+    // Close buttons for all overlays
+    const closeButtons = document.querySelectorAll('[id^="closeOverlay"]');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Find the parent overlay of this close button
+            const overlay = this.closest('.daniils-design-overlay, .about-me-overlay, .experience-overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+            }
+        });
     });
     
-    // Close the overlay when clicking outside the content
-    overlay.addEventListener('click', function(event) {
-        if (event.target === overlay) {
-            overlay.style.display = 'none';
-        }
+    // Close overlays when clicking outside content
+    const overlays = [daniilsOverlay, aboutMeOverlay, experienceOverlay].filter(Boolean);
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', function(event) {
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
     });
 });
