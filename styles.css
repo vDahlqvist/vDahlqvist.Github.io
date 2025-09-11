@@ -42,6 +42,7 @@ html, body {
     align-items: center;
     text-align: center;
     background-color: #7E6EB5;
+    max-height: 300px;
 }
 
 .my-projects button {
@@ -76,6 +77,7 @@ html, body {
   background-color: rgba(0,0,0,0.5); 
   z-index: 2; 
   cursor: pointer; 
+  
 }
 
 .overlay-content {
@@ -89,6 +91,7 @@ html, body {
   padding: 20px;
   border-radius: 15px;
   max-width: 80%;
+  background-color: #7E6EB5;
 }
 
 .overlay-content a {
@@ -114,7 +117,7 @@ button:hover {
 }
 
 a {
-  color: #201B33;
+  color: #201B33  ;
   text-decoration: none;
 }
 a:hover {
