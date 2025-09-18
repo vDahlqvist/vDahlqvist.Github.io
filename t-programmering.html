@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tillämpad Programmering</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -18,19 +17,37 @@
     </div>
 
     <main class="grid">
-        <div class="daniils-design" id="showOverlay">
+        <!-- Daniils Design Card -->
+        <div class="daniils-design" id="daniilsCard">
             <h2>Daniils Design</h2>
             <p>En beskrivning av projektet Daniils Design.</p>
         </div>
-        <div class="daniils-design-overlay" id="overlay">
-            <div class="overlay-content">
-                <h2>Daniils Design</h2>
-                <p>En beskrivning av projektet Daniils Design.</p>
-                <a href="https://vdahlqvist.github.io/Daniils-design/">Se projektet här</a>
-                <button id="closeOverlay">Stäng</button>
-            </div>
+        
+        <!-- Interest Site Card -->
+        <div class="interest-site" id="interest-site">
+            <h2>Intressesida</h2>
+            <p>En beskrivning av projektet Intressesida.</p>
         </div>
     </main>
-    
+
+    <!-- Overlays outside the main content -->
+    <div class="daniils-design-overlay" id="overlay">
+        <div class="overlay-content">
+            <h2>Daniils Design</h2>
+            <p>En beskrivning av projektet Daniils Design.</p>
+            <a href="https://vdahlqvist.github.io/Daniils-design/">Se projektet här</a>
+            
+        </div>
+    </div>
+
+    <div class="interest-site-overlay" id="interest-site-overlay">
+        <div class="overlay-content">
+            <h2>Intressesida</h2>
+            <p>En beskrivning av projektet Intressesida.</p>
+            <a href="https://vdahlqvist.github.io/Interest-site/">Se projektet här</a>
+            
+        </div>
+    </div>
+
 </body>
 </html>

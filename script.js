@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const daniilsOverlay = document.getElementById('overlay');
     const aboutMeOverlay = document.getElementById('about-me-overlay');
     const experienceOverlay = document.getElementById('experience-overlay');
-    
+    const interestSiteOverlay = document.getElementById('interest-site-overlay');
+
     // Get card elements
     const aboutMeCard = document.getElementById('about-me');
     const experienceCard = document.getElementById('experience');
     const programmering1 = document.getElementById('programmering1');
     const personal = document.getElementById('personal');
     const daniilsCard = document.getElementById('daniilsCard');
+    const interestSiteCard = document.getElementById('interest-site');
 
     // Handle overlay displays for cards
     if (aboutMeCard && aboutMeOverlay) {
@@ -27,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (daniilsCard && daniilsOverlay) {
         daniilsCard.addEventListener('click', function() {
             daniilsOverlay.style.display = 'block';
+        });
+    }
+
+    if (interestSiteCard && interestSiteOverlay) {
+        interestSiteCard.addEventListener('click', function() {
+            interestSiteOverlay.style.display = 'block';
         });
     }
 
@@ -48,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Find the parent overlay of this close button
-            const overlay = this.closest('.daniils-design-overlay, .about-me-overlay, .experience-overlay');
+            const overlay = this.closest('.daniils-design-overlay, .about-me-overlay, .experience-overlay, .interest-site-overlay');
             if (overlay) {
                 overlay.style.display = 'none';
             }
@@ -56,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Close overlays when clicking outside content
-    const overlays = [daniilsOverlay, aboutMeOverlay, experienceOverlay].filter(Boolean);
+    const overlays = [daniilsOverlay, aboutMeOverlay, experienceOverlay, interestSiteOverlay].filter(Boolean);
     overlays.forEach(overlay => {
         overlay.addEventListener('click', function(event) {
             if (event.target === overlay) {
